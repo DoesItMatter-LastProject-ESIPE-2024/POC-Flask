@@ -3,10 +3,12 @@
 
 from waitress import serve #serveur de production
 from flask import Flask #serveur web python
+from swagger_ui import api_doc
 
 import random
 
 app = Flask(__name__)
+api_doc(app, config_path='./swagger.yml', url_prefix='/api', title='API DIM')
 
 @app.route('/', methods = ['GET', 'POST'])
 def hello_world():
