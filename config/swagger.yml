@@ -1,0 +1,27 @@
+---
+openapi: 3.0.1
+info:
+  title: API DIM
+  description: Fichier swagger correspondant à l'api des objets matters
+  version: 1.0.0
+servers:
+  - url: http://127.0.0.1:8989/api
+tags:
+  - name: API DIM
+    description: default api test
+paths:
+  "/hello":
+    get:
+      tags:
+      - default
+      summary: output hello world.
+      responses:
+        '200':
+          description: OK
+          content:
+            application/text:
+              schema:
+                type: object
+                example: Hello World!!!
+components: {}
+
